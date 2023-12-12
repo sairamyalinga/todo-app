@@ -3,3 +3,4 @@ dotenv
 package-lock.json
 trail.pem
 .DS_Store
+.env
