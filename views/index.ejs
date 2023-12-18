@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>TO DO</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
     <h2>Tasks to Do:</h2>
@@ -14,9 +15,14 @@
     </form>
 
     <h3>Task List:</h3>
-    <ul>
+    <ul id="taskList">
       <% for(let task of tasks) { %>
-        <li><%= task.tasks %></li>
+        <li>
+          <%= task.tasks %>
+          <form action="/deleteTask/<%= task._id %>" method="post" style="display:inline;">
+            <button type="submit">Delete</button>
+          </form>
+        </li>
       <% } %>
     </ul>
   </body>

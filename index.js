@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+const path = require('path');
 app.use(bodyParser.urlencoded({ extended: true }));
 require('dotenv').config();
 
@@ -16,9 +17,10 @@ const TaskObj = mongoose.model('TaskObj', taskSchema);
 
 // Set EJS as the view engine
 app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res) {
-  TaskObj.find({}) // `find` returns a query, no need for a callback
+  TaskObj.find({})
     .then(tasks => {
       res.render('index', { tasks: tasks });
     })
@@ -40,6 +42,19 @@ app.post('/addTask', function(req, res) {
   newTask.save()
     .then(() => {
       // Redirect to the home page after adding a task
+      res.redirect('/');
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ error: 'An error occurred' });
+    });
+});
+
+app.post('/deleteTask/:taskId', function(req, res) {
+  const taskId = req.params.taskId;
+
+  TaskObj.findByIdAndDelete(taskId)
+    .then(() => {
       res.redirect('/');
     })
     .catch(err => {
