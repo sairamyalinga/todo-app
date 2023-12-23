@@ -19,11 +19,20 @@
       <% for(let task of tasks) { %>
         <li>
           <%= task.tasks %>
-          <form action="/deleteTask/<%= task._id %>" method="post" style="display:inline;">
-            <button type="submit">Delete</button>
+          <form id="deleteForm_<%= task._id %>" action="/deleteTask/<%= task._id %>" method="post" style="display:inline;">
+            <button type="button" onclick="confirmDelete('<%= task._id %>')">Delete</button>
           </form>
         </li>
       <% } %>
     </ul>
+    <script>
+      function confirmDelete(taskId) {
+        var confirmDelete = confirm("Are you sure you want to delete?");
+        if (confirmDelete) {
+          // If the user clicks "OK" in the confirmation dialog, submit the form
+          document.getElementById('deleteForm_' + taskId).submit();
+        }
+      }
+    </script>
   </body>
 </html>
