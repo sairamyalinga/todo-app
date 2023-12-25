@@ -1,0 +1,5 @@
+node_modules
+.env
+PROJECT_report.docx
+PROJECT_report.pdf
+trail.pem
