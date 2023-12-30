@@ -71,4 +71,4 @@ jobs:
 
       - name: Deploy Docker image
         run: |
-          ssh -t your-server 'docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.TOKEN }} && docker pull ghcr.io/sairamyalinga/todo-app:latest && docker-compose -f /root/sample-aws-project/docker-compose.yml up -d'
+          ssh -t your-server 'docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.TOKEN }} && docker pull ghcr.io/sairamyalinga/todo-app:latest && docker compose -f /root/sample-aws-project/docker-compose.yml up -d'
