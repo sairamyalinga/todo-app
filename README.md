@@ -23,11 +23,7 @@ This is a simple To-Do application built using Node.js. It allows users to add t
    - Upon successful tests, the deployment workflow securely transfers the application to the Digital Ocean droplet(server where the application is deployed).
 
 4. **Live Application:**
-   - The application is now live and accessible at [https://sairamya.tech](https://sairamya.tech).
-
-### Accessing the Deployed Application
-
-The deployed application can be accessed at [https://sairamya.tech](https://sairamya.tech). Feel free to explore and interact with the live version of the To-Do app.
+   - The application is now live and accessible at [https://sairamya.tech](https://sairamya.tech).Feel free to explore and interact with the live version of the To-Do app.
 
 
 ## How to Run the App
