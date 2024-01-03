@@ -11,6 +11,25 @@ This is a simple To-Do application built using Node.js. It allows users to add t
 - **Docker**: Docker is used for containerization, making it easy to deploy the application in different environments.
 - **GitHub Actions**: GitHub Actions is used for continuous integration, automating the testing process whenever changes are pushed to the repository.
 
+#### Deployment Process
+
+1. **Push to GitHub:**
+   - Any push to the main branch triggers GitHub Actions workflows.
+
+2. **Continuous Integration:**
+   - GitHub Actions runs tests and ensures code quality.
+
+3. **Automated Deployment:**
+   - Upon successful tests, the deployment workflow securely transfers the application to the Digital Ocean droplet(.
+
+4. **Live Application:**
+   - The application is now live and accessible at [https://sairamya.tech](https://sairamya.tech).
+
+### Accessing the Deployed Application
+
+The deployed application can be accessed at [https://sairamya.tech](https://sairamya.tech). Feel free to explore and interact with the live version of the To-Do app.
+
+
 ## How to Run the App
 
 ### Prerequisites
@@ -20,4 +39,8 @@ This is a simple To-Do application built using Node.js. It allows users to add t
 
 ### Steps
 
-1. Clone the repository:
+1. Clone the repository using git clone.
+2. Go to the project directory.
+3. Install the dependencies 'npm install'.
+4. Run the docker container 'docker-compose up -d' to run the application.
+   
