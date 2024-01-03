@@ -20,7 +20,7 @@ This is a simple To-Do application built using Node.js. It allows users to add t
    - GitHub Actions runs tests and ensures code quality.
 
 3. **Automated Deployment:**
-   - Upon successful tests, the deployment workflow securely transfers the application to the Digital Ocean droplet(.
+   - Upon successful tests, the deployment workflow securely transfers the application to the Digital Ocean droplet(server where the application is deployed).
 
 4. **Live Application:**
    - The application is now live and accessible at [https://sairamya.tech](https://sairamya.tech).
@@ -41,6 +41,5 @@ The deployed application can be accessed at [https://sairamya.tech](https://sair
 
 1. Clone the repository using git clone.
 2. Go to the project directory.
-3. Install the dependencies 'npm install'.
-4. Run the docker container 'docker-compose up -d' to run the application.
+3.  Run the docker container `docker-compose up -d` to run the application.
    
